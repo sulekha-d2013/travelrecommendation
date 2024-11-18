@@ -14,14 +14,14 @@
               console.log(condition0);
               const L = condition0.cities.length;
               const R = Math.floor(Math.random() * (L + 1));
-
+              console.log("length:", L, "Selected:", R);
               resultDiv.innerHTML += `<h2>${condition0.cities[R].name}</h2>`;
               resultDiv.innerHTML += `<img src="${condition0.cities[R].imageUrl}" alt="hjh">`;
 
               resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition0.cities[R].description}</p>`;
             }
 
-            const condition1 = data.temples.find(item => item.name.toLowerCase() === input);
+            const condition1 = data.temples.find(item => item.name.toLowerCase().includes(input));
             if (condition1) {
 
               console.log(condition1.name, condition1.imageUrl, condition1.description);
@@ -31,7 +31,7 @@
               resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition1.description}</p>`;
             }
 
-            const condition2 = data.beaches.find(item => item.name.toLowerCase() === input);
+            const condition2 = data.beaches.find(item => item.name.toLowerCase().includes(input));
             if (condition2) {
 
               resultDiv.innerHTML += `<h2>${condition2.name}</h2>`;
