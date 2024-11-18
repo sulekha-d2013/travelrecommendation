@@ -22,23 +22,31 @@
               }
             }
 
-            const condition1 = data.temples.find(item => item.name.toLowerCase().includes(input));
-            if (condition1) {
+            const condition1 = data.temples;
+            if (input.includes("temple")) {
 
               console.log(condition1.name, condition1.imageUrl, condition1.description);
-              resultDiv.innerHTML += `<h2>${condition1.name}</h2>`;
-              resultDiv.innerHTML += `<img src="${condition1.imageUrl}" alt="hjh">`;
+              resultDiv.innerHTML += `<h2>${condition1[0].name}</h2>`;
+              resultDiv.innerHTML += `<img src="${condition1[0].imageUrl}" alt="hjh">`;
+              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition1[0].description}</p>`;
 
-              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition1.description}</p>`;
+              resultDiv.innerHTML += `<h2>${condition1[1].name}</h2>`;
+              resultDiv.innerHTML += `<img src="${condition1[1].imageUrl}" alt="hjh">`;
+              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition1[1].description}</p>`;
+
             }
 
-            const condition2 = data.beaches.find(item => item.name.toLowerCase().includes(input));
-            if (condition2) {
+            const condition2 = data.beaches;
+            if (input.includes("beach")) {
 
-              resultDiv.innerHTML += `<h2>${condition2.name}</h2>`;
-              resultDiv.innerHTML += `<img src="${condition2.imageUrl}" alt="hjh">`;
+              resultDiv.innerHTML += `<h2>${condition2[0].name}</h2>`;
+              resultDiv.innerHTML += `<img src="${condition2[0].imageUrl}" alt="hjh">`;
+              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition2[0].description}</p>`;
 
-              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition2.description}</p>`;
+              resultDiv.innerHTML += `<h2>${condition2[1].name}</h2>`;
+              resultDiv.innerHTML += `<img src="${condition2[1].imageUrl}" alt="hjh">`;
+              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition2[1].description}</p>`;
+
             }
 
             if (!condition0 && !condition1 && !condition2){
@@ -51,3 +59,10 @@
           });
       }
         btnSearch.addEventListener('click', searchCondition);
+
+        function resetForm() {
+          const resultDiv = document.getElementById('result');
+          resultDiv.innerHTML = '';
+        }
+
+        btnClear.addEventListener('click', resetForm);
