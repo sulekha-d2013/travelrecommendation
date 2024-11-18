@@ -27,23 +27,24 @@
 
             if (C0 === 0 && input.includes("countr"))
             {
-                const condition0 = data.countries;
-                const L = condition0.length;
+                const condition3 = data.countries;
+                const L = condition3.length;
                 const R0 = Math.floor(Math.random() * L);
                 const R1 = (R0 + 1)%L;
 
-                resultDiv.innerHTML += `<h2>${condition0[R0].cities[0].name}</h2>`;
-                resultDiv.innerHTML += `<img src="${condition0[R0].cities[0].imageUrl}" alt="hjh">`;
-                resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition0[R0].cities[0].description}</p>`;
+                resultDiv.innerHTML += `<h2>${condition3[R0].cities[0].name}</h2>`;
+                resultDiv.innerHTML += `<img src="${condition3[R0].cities[0].imageUrl}" alt="hjh">`;
+                resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition3[R0].cities[0].description}</p>`;
 
-                resultDiv.innerHTML += `<h2>${condition0[R1].cities[0].name}</h2>`;
-                resultDiv.innerHTML += `<img src="${condition0[R1].cities[0].imageUrl}" alt="hjh">`;
-                resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition0[R1].cities[0].description}</p>`;
+                resultDiv.innerHTML += `<h2>${condition3[R1].cities[0].name}</h2>`;
+                resultDiv.innerHTML += `<img src="${condition3[R1].cities[0].imageUrl}" alt="hjh">`;
+                resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition3[R1].cities[0].description}</p>`;
 
             }
 
-            const condition1 = data.temples;
+
             if (input.includes("temple")) {
+              const condition1 = data.temples;
               C1 = 1;
               resultDiv.innerHTML += `<h2>${condition1[0].name}</h2>`;
               resultDiv.innerHTML += `<img src="${condition1[0].imageUrl}" alt="hjh">`;
@@ -55,8 +56,9 @@
 
             }
 
-            const condition2 = data.beaches;
+
             if (input.includes("beach")) {
+              const condition2 = data.beaches;
               C2 = 1;
               resultDiv.innerHTML += `<h2>${condition2[0].name}</h2>`;
               resultDiv.innerHTML += `<img src="${condition2[0].imageUrl}" alt="hjh">`;
