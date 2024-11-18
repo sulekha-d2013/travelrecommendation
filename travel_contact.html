@@ -31,8 +31,7 @@
     }
   </style>
 </head>
-<body>
-  <p style="background-image: url('mahal.jpg');">
+<body background="./borabora.jpg">
   <nav><h1>Travel Bloom</h1>
     <ul>
       <li><a href="./index.html" id="home">Home </a></li>
@@ -41,19 +40,27 @@
       </li>
     </ul>
     </nav>
-  <h1>About Us</h1>
-  <p>Feel free to contact us to know more about your queries.</p>
+  <h1>Contact Us</h1>
+  <h2>Feel free to contact us to know more about your queries.</h2>
   <form id="contactForm">
     <div>
-      <label for="name">Name</label>
+      <h2>Name</h2>
       <input type="text" id="name" name="name" required>
     </div>
     <div>
-      <label for="email">Email</label>
+      <h2>Email</h2>
       <input type="email" id="email" name="email" required>
     </div>
     <div>
-      <label for="message">Message</label>
+      <h2>Message</h2>
       <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+        <button type="submit" onclick="thankyou()">Submit</button>
+  </form>
+  <script>
+    function thankyou(){
+        alert('Thank you for contacting us!')
+    }
+  </script>
 </body>
 </html>
