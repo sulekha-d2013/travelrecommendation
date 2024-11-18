@@ -11,6 +11,7 @@
             const condition0 = data.countries.find(item => item.name.toLowerCase() === input);
 
             if (condition0) {
+              console.log(condition0)
 
               resultDiv.innerHTML += `<h2>${condition0.name}</h2>`;
               resultDiv.innerHTML += `<img src="${condition0.cities[0].imageUrl}" alt="hjh">`;
