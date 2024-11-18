@@ -13,16 +13,16 @@
             if (condition0) {
 
               resultDiv.innerHTML += `<h2>${condition0.name}</h2>`;
-              resultDiv.innerHTML += `<img src="${condition0.imagesrc}" alt="hjh">`;
+              resultDiv.innerHTML += `<img src="${condition0.cities[0].imageUrl}" alt="hjh">`;
 
-              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition0.description}</p>`;
+              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition0.cities[0].description}</p>`;
             }
 
             const condition1 = data.temples.find(item => item.name.toLowerCase() === input);
             if (condition1) {
 
               resultDiv.innerHTML += `<h2>${condition1.name}</h2>`;
-              resultDiv.innerHTML += `<img src="${condition1.imagesrc}" alt="hjh">`;
+              resultDiv.innerHTML += `<img src="${condition1.imageUrl}" alt="hjh">`;
 
               resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition1.description}</p>`;
             }
@@ -31,7 +31,7 @@
             if (condition2) {
 
               resultDiv.innerHTML += `<h2>${condition2.name}</h2>`;
-              resultDiv.innerHTML += `<img src="${condition2.imagesrc}" alt="hjh">`;
+              resultDiv.innerHTML += `<img src="${condition2.imageUrl}" alt="hjh">`;
 
               resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition2.description}</p>`;
             }
