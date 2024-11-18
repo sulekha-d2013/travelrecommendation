@@ -7,7 +7,7 @@
         fetch('./travel_recommendation_api.json')
           .then(response => response.json())
           .then(data => {
-            console.log('data:', data);
+
             const condition0 = data.countries.find(item => item.name.toLowerCase().includes(input));
 
             let C0 = 0;
@@ -25,8 +25,10 @@
               }
             }
 
+
             if (C0 === 0 && input.includes("countr"))
             {
+                C0 = 1;
                 const condition3 = data.countries;
                 const L = condition3.length;
                 const R0 = Math.floor(Math.random() * L);
