@@ -8,18 +8,38 @@
           .then(response => response.json())
           .then(data => {
             console.log('data:', data);
-            /*const condition = data.conditions.find(item => item.name.toLowerCase() === input);
+            const condition0 = data.countries.name.find(item => item.name.toLowerCase() === input);
 
-            if (condition) {
+            if (condition0) {
 
-              resultDiv.innerHTML += `<h2>${condition.name}</h2>`;
-              resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`;
+              resultDiv.innerHTML += `<h2>${condition0.name}</h2>`;
+              resultDiv.innerHTML += `<img src="${condition0.imagesrc}" alt="hjh">`;
 
-              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition.description}</p>`;
-            } else {
+              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition0.description}</p>`;
+            }
+
+            const condition1 = data.temples.name.find(item => item.name.toLowerCase() === input);
+            if (condition1) {
+
+              resultDiv.innerHTML += `<h2>${condition1.name}</h2>`;
+              resultDiv.innerHTML += `<img src="${condition1.imagesrc}" alt="hjh">`;
+
+              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition1.description}</p>`;
+            }
+
+            const condition2 = data.beaches.name.find(item => item.name.toLowerCase() === input);
+            if (condition2) {
+
+              resultDiv.innerHTML += `<h2>${condition2.name}</h2>`;
+              resultDiv.innerHTML += `<img src="${condition2.imagesrc}" alt="hjh">`;
+
+              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition2.description}</p>`;
+            }
+
+            if (!condition0 && !condition1 && !condition2){
               resultDiv.innerHTML = 'Location not found.';
             }
-          */})
+          })
           .catch(error => {
             console.error('Error:', error);
             resultDiv.innerHTML = 'An error occurred while fetching data.';
