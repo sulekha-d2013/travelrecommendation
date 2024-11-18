@@ -8,7 +8,7 @@
           .then(response => response.json())
           .then(data => {
             console.log('data:', data);
-            const condition = data.conditions.find(item => item.name.toLowerCase() === input);
+            /*const condition = data.conditions.find(item => item.name.toLowerCase() === input);
 
             if (condition) {
 
@@ -19,7 +19,7 @@
             } else {
               resultDiv.innerHTML = 'Location not found.';
             }
-          })
+          */})
           .catch(error => {
             console.error('Error:', error);
             resultDiv.innerHTML = 'An error occurred while fetching data.';
