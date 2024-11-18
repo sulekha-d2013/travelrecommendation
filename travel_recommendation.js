@@ -12,13 +12,14 @@
 
             if (condition0) {
               console.log(condition0);
-              const L = condition0.cities.length;
-              const R = Math.floor(Math.random() * (L + 1));
-              console.log("length:", L, "Selected:", R);
-              resultDiv.innerHTML += `<h2>${condition0.cities[R].name}</h2>`;
-              resultDiv.innerHTML += `<img src="${condition0.cities[R].imageUrl}" alt="hjh">`;
 
-              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition0.cities[R].description}</p>`;
+              for (let i = 0; i < condition0.cities.length; i++) {
+
+                resultDiv.innerHTML += `<h2>${condition0.cities[i].name}</h2>`;
+                resultDiv.innerHTML += `<img src="${condition0.cities[i].imageUrl}" alt="hjh">`;
+
+                resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition0.cities[i].description}</p>`;
+              }
             }
 
             const condition1 = data.temples.find(item => item.name.toLowerCase().includes(input));
