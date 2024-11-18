@@ -11,7 +11,7 @@
             const condition0 = data.countries.find(item => item.name.toLowerCase() === input);
 
             if (condition0) {
-              console.log(condition0)
+              console.log(condition0);
 
               resultDiv.innerHTML += `<h2>${condition0.name}</h2>`;
               resultDiv.innerHTML += `<img src="${condition0.cities[0].imageUrl}" alt="hjh">`;
@@ -22,6 +22,7 @@
             const condition1 = data.temples.find(item => item.name.toLowerCase() === input);
             if (condition1) {
 
+              console.log(condition1.name, condition1.imageUrl, condition1.description);
               resultDiv.innerHTML += `<h2>${condition1.name}</h2>`;
               resultDiv.innerHTML += `<img src="${condition1.imageUrl}" alt="hjh">`;
 
