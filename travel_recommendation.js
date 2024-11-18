@@ -84,6 +84,8 @@
         btnSearch.addEventListener('click', searchCondition);
 
         function resetForm() {
+          const ip_txt = document.getElementById("conditionInput");
+          ip_txt.value = "";
           const resultDiv = document.getElementById('result');
           resultDiv.innerHTML = '';
         }
