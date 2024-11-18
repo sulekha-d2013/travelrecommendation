@@ -8,15 +8,17 @@
           .then(response => response.json())
           .then(data => {
             console.log('data:', data);
-            const condition0 = data.countries.find(item => item.name.toLowerCase() === input);
+            const condition0 = data.countries.find(item => item.name.toLowerCase().includes(input));
 
             if (condition0) {
               console.log(condition0);
+              const L = condition0.cities.length;
+              const R = Math.floor(Math.random() * (L + 1));
 
-              resultDiv.innerHTML += `<h2>${condition0.name}</h2>`;
-              resultDiv.innerHTML += `<img src="${condition0.cities[0].imageUrl}" alt="hjh">`;
+              resultDiv.innerHTML += `<h2>${condition0.cities[R].name}</h2>`;
+              resultDiv.innerHTML += `<img src="${condition0.cities[R].imageUrl}" alt="hjh">`;
 
-              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition0.cities[0].description}</p>`;
+              resultDiv.innerHTML += `<p><strong>Description:</strong> ${condition0.cities[R].description}</p>`;
             }
 
             const condition1 = data.temples.find(item => item.name.toLowerCase() === input);
